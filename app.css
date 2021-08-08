@@ -1,0 +1,104 @@
+.week, .weekTotal {
+    width: 800px;
+    font-size: 2em;
+    border: 1px solid;
+    border-radius: 20px 20px 20px 20px;
+    text-align: left;
+    padding: 5px 30px;
+    margin-top: 5px;
+}
+span.weekSum {
+    float: right;
+}
+.sup {
+    width: 770px;
+    font-size: 1.5em;
+    border: 1px darkgreen solid;
+    border-radius: 20px 20px 20px 20px;
+    text-align: left;
+    padding: 5px 30px;
+    margin: 1px 0px 1px 30px;
+}
+.row {
+    width: 750px;
+    font-size: 1.2em;
+    border: 1px orange solid;
+    border-radius: 0px 10px 10px 0px;
+    text-align: left;
+    padding: 5px 30px;
+    margin: 0px 0px -1px 50px;
+}
+span.rowSum {
+    display: inline-block;
+    float: right;
+    width: 100px;
+    text-align: right;
+}
+span.rowDate {
+    display: inline-block;
+    float: right;
+    width: 150px;
+}
+.weekSups, .rows {
+    display: none;
+}
+.sup, .week {
+    cursor: pointer;
+}
+.supName {
+    width:570px;
+    overflow-x:hidden;
+    display: inline-block;
+}
+.week:hover {
+    background-color: #ededed;
+}
+.sup:hover {
+    background-color: #d8ffd8;
+}
+.row:hover {
+    background-color: #fff5e2;
+}
+span.weekCheck, span.curCheck, span.lineCheck {
+    float: right;
+    margin: 0 5px;
+}
+.uprow > .row > .lineCheck::before, .sup > .curCheck::before, .week > .weekCheck::before {
+    content: "\25CC";
+    font-size: 2.4em;
+    line-height: 0.35em;
+    /* vertical-align: top; */
+    margin: 0 0 0 5px;
+}
+.uprow.selected > .row > .lineCheck::before, .sup.selected > .curCheck::before {
+    content: "\2611" !important;
+    font-size: 2.2em;
+    line-height: 0.45em;
+}
+.week.selected > .weekCheck::before {
+    content: "\2611" !important;
+    font-size: 2em;
+    line-height: 0.6em;
+}
+.sup.halfselected > .curCheck::before, .week.halfselected > .weekCheck::before {
+    content: "\25D0" !important;
+    font-size: 1.8em;
+    line-height: 0.6em;
+}
+
+.uprow.selected .row .lineCheck::before {
+    font-size: 25px !important;
+}
+
+.sup.selected .curCheck::before {
+    font-size: 30px !important;
+}
+.week.selected .weekCheck::before {
+    font-size: 40px !important;
+}
+.sup.halfselected .curCheck::before {
+    font-size: 30px !important;
+} 
+.week.halfselected .weekCheck::before {
+    font-size: 40px !important;
+}
